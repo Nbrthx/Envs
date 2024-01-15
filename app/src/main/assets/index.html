@@ -10,12 +10,12 @@
 <body>
     <h1>Hello World</h1>
     <p id="msg"></p>
-    <button onclick="showAndroidToast('Hello')">Hello</button>
+    <button onclick="showAndroidToast('Hello', '')">Hello</button>
     <script>
         document.getElementById("msg").innerHTML = "Here javascript"
 
-        function showAndroidToast(toast) {
-            Android.showAlert(toast);
+        function showAndroidToast(toast, title) {
+            Android.showAlert(toast, title);
         }
     </script>
 </body>

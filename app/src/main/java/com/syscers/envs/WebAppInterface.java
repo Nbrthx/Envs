@@ -20,10 +20,10 @@ public class WebAppInterface {
     }
 
     @JavascriptInterface
-    public void showAlert(String alert) {
+    public void showAlert(String message, String title) {
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-        builder.setMessage(alert)
-                .setTitle(alert);
+        builder.setMessage(message);
+        if(title.isEmpty()) builder.setTitle(title);
 
         builder.create().show();
     }
